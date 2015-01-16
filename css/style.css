@@ -1,0 +1,113 @@
+body
+{
+	background-color: #b3b3b3;
+}
+h3
+{
+		font-weight: bolder;
+}
+.logo
+{
+	min-height: 9.5em;
+}
+.main_picture
+{
+	max-height: 25em;
+	overflow: hidden;
+}
+.zegadlowicz
+{
+	padding-top: 5em;
+	padding-bottom: 5em;
+}
+.author_desc p
+{
+	font-size: 0.90em;
+}
+.szlaczek
+{
+	overflow: hidden;
+	max-height: 30em;
+	margin-top: 1.3em;
+}
+.portrait
+{
+	max-height: 30em;
+	overflow: hidden;
+	margin-top: 1.3em;
+}
+.museum_section_header
+{
+	text-align: center;
+}
+.symbol
+{
+	text-align: center;
+}
+.symbol_img
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.museum_description
+{
+	padding-top: 5em;
+}
+.navigation a
+{
+	 display: table-cell;
+   vertical-align: bottom;
+   height: 100px;
+	 text-align: center !important;
+   min-height:10em;
+   box-sizing:content-box;
+   padding-right: 0.7em;
+   padding-left: 0.7em;
+   color: black;
+}
+.navigation nav
+{
+	min-height:10em;
+}
+#map-google 
+{
+	dislay: block;
+	overflow:hidden;
+	height:400px;
+	width:500px;
+	margin-left: 0;
+}
+.address_box 
+{
+	display: table-cell;
+  vertical-align: bottom;
+  height: 350px;
+}
+.address_box p
+{
+	      font-size: 1.2em;
+}
+#gmap_canvas
+{
+	height:400px;
+	width:600px;
+}
+footer .row
+{
+	height: 5em;
+	background-color: white;
+}
+.symbol_img
+{
+	height:9em;
+}
+section
+{
+	padding-bottom: 4em;
+}
+#gmap_canvas img
+{	
+	max-width:none!important;
+	background:none!important;
+}
