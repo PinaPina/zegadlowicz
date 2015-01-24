@@ -254,38 +254,44 @@
         <div class="row">
                 <h3 >KONTAKT</h3>
         </div>
-        
         <div class="row">
-            <div class="two columns push_one form-name">
-                <span>imię i nazwisko</span>
-            </div>
-            <div class="nine columns form">
-                <input type="text" name="name"><br>
+            <div class="twelve columns" id="info">
             </div>
         </div>
-        
-        <div class="row">
-            <div class="two columns push_one form-name">
-                <span>adres e-mail</span>
+        <form name="contact" id="contact" method="post">
+            
+            <div class="row">
+                <div class="two columns push_one form-name">
+                    <span>imię i nazwisko</span>
+                </div>
+                <div class="nine columns form">
+                    <input type="text" name="name" id="name"><br>
+                </div>
             </div>
-            <div class="nine columns form">
-                <input type="text" name="email">
+
+            <div class="row">
+                <div class="two columns push_one form-name">
+                    <span>adres e-mail</span>
+                </div>
+                <div class="nine columns form">
+                    <input type="text" name="email" id="email">
+                </div>
             </div>
-        </div>
-        
-        <div class="row">
-            <div class="two columns push_one form-name">
-                <span>nazwisko</span>
+
+            <div class="row">
+                <div class="two columns push_one form-name">
+                    <span>wiadomość</span>
+                </div>
+                <div class="nine columns form">
+                    <textarea id="tresc"></textarea>
+                </div>
             </div>
-            <div class="nine columns form">
-                <textarea></textarea>
+            <div class="row">
+                <div class="nine columns form push_three">
+                    <span id="loader"><i class="icon-back-in-time"></i>Proszę czekać ... </span><input type="submit" value="WYŚLIJ">
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="nine columns form push_three">
-                <input type="submit" value="WYŚLIJ">
-            </div>
-        </div>
+        </form>
         
     </section>
     
@@ -357,6 +363,55 @@
                 }
 
             });    
+            
+            
+            
+            
+            
+            $(function(){
+                $("#contact").submit(function(e){
+                    var loader=$("#loader");
+                    var info=$("#info");
+                    var form=$(this);
+                    var name=$("#contact :input[id=name]").val();
+                    var email=$("#contact :input[id=email]").val();
+                    var tresc=$("#contact :input[id=tresc]").val();
+                    $.ajax({
+                         url: "mail.php",
+                         dataType: "JSON",
+                         data:"name="+name+"&email="+email+"&tresc="+tresc,
+                         type: "post",
+
+                         beforeSend: function(){
+                             info.hide();
+                             loader.show();
+                         },
+                         success: function(obj){
+                             if (obj.type=="ok")
+                             {
+                                 info.addClass("ok").removeClass("error").html(obj.text);
+                                 form.hide();
+
+                                 
+
+
+                             } else
+                             {
+                                info.addClass("error").removeClass("ok").html(obj.text);
+
+                             }
+                         },
+                         error : function(){
+                             info.addClass("error").removeClass("ok").html('<p style="color:#CE0B35;margin: 0px;line-height: 17px;">Wystąpił nieoczekiwany problem. Spróbuj później.</p>')
+                         },
+                         complete: function(){
+                             loader.hide();
+                             info.show();
+                         }
+                    });
+                    e.preventDefault();
+                })
+             });
             
         </script>
 

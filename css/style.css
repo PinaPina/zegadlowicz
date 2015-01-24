@@ -692,3 +692,25 @@ input[type=submit]:hover {
     color: #000;
 }
 
+#info {
+	text-align: center;
+	color: #ff2c50;
+	padding-bottom: 30px;
+}
+h4.error {
+	padding-top: 0px;
+	margin-top: 0px;
+	color: #ff2c50;
+}
+p.error {
+	margin: 0;
+}
+h4.done {
+	color: #36c15e;
+}
+
+#loader {
+	padding-right: 20px;
+	display: none;
+}
+

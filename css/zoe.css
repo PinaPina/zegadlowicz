@@ -21,7 +21,11 @@
 	cursor: pointer;
         margin-bottom: 2em;
 }
-
+@media only screen and (max-width: 768px) { 
+        .grid figure {
+            float: none;
+        }
+}
 .grid figure img {
 	position: relative;
 	display: block;
