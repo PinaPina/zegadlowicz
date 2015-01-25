@@ -224,7 +224,7 @@ nav a:focus {
 	margin: 20px 0 0px;
 }
 .rmm { display: none !important;}
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1000px) {
     .rmm { 
         display: block !important;
         width: 100%;
