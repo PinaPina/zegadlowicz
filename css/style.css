@@ -101,7 +101,7 @@ h3
 }
 #map-google 
 {
-	dislay: block;
+	display: block;
 	overflow:hidden;
 	height:400px;
 	width:500px;
@@ -328,7 +328,7 @@ width: 100% !important;
 
 .rmm .rmm-main-list li {
 	display:inline;
-	padding:padding:0px;
+	padding:0px;
 	margin:0px !important;
 }
 .rmm-toggled {
@@ -571,7 +571,7 @@ border-bottom-right-radius: 5px;
 	top:9px;
 	left:9px;
 	font-size:16px;
-	color:#33333;
+	color:#333333;
 }
 .rmm.minimal .rmm-button {
 	display:block;
